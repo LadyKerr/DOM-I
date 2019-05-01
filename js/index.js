@@ -51,28 +51,31 @@ nav[4].textContent = siteContent['nav']['nav-item-5'];
 nav[5].textContent = siteContent['nav']['nav-item-6'];
 
 
-//Top Area Text
+//Top Area Text & Image
 const ctaText = document.querySelector('.cta-text h1');
 ctaText.textContent = siteContent['cta']['h1'];
 
 const ctaButton = document.querySelector('.cta-text button');
 ctaButton.textContent = siteContent['cta']['button'];
 
-//Top Area Image
 const ctaImg = document.querySelector('#cta-img');
 ctaImg.setAttribute('src', siteContent['cta']['img-src'])
 
-//Middle Area Texts
+//Middle Area Text & Image
 document.querySelectorAll('.text-content');
 
-
-//Middle Image
 const middleImg = document.querySelector('#middle-img');
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
 
 //Contact Info
-document.querySelector('.contact');
+const contactHeader = document.querySelector('.contact h4');
+contactHeader.textContent = siteContent['contact']['contact-h4'];
 
+const contactAddress = document.querySelectorAll('.contact p');
+contactAddress[0].textContent = siteContent['contact']['address'];
+contactAddress[1].textContent = siteContent['contact']['phone'];
+contactAddress[2].textContent = siteContent['contact']['email'];
 
 //Footer
-document.querySelector('footer');
+const footer = document.querySelector('footer');
+footer.textContent = siteContent['footer']['copyright'];
