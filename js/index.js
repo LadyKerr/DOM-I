@@ -61,8 +61,22 @@ ctaButton.textContent = siteContent['cta']['button'];
 const ctaImg = document.querySelector('#cta-img');
 ctaImg.setAttribute('src', siteContent['cta']['img-src'])
 
-//Middle Area Text & Image
-document.querySelectorAll('.text-content');
+//Middle Area Texts & Image
+const textHeading = document.querySelectorAll('.text-content h4');
+console.log(textHeading);
+textHeading[0].textContent = siteContent['main-content']['features-h4'];
+textHeading[1].textContent = siteContent['main-content']['about-h4'];
+textHeading[2].textContent = siteContent['main-content']['services-h4'];
+textHeading[3].textContent = siteContent['main-content']['product-h4'];
+textHeading[4].textContent = siteContent['main-content']['vision-h4'];
+
+const textP = document.querySelectorAll('.text-content p');
+console.log(textP);
+textP[0].textContent = siteContent['main-content']['features-content'];
+textP[1].textContent = siteContent['main-content']['about-content'];
+textP[2].textContent = siteContent['main-content']['services-content'];
+textP[3].textContent = siteContent['main-content']['product-content'];
+textP[4].textContent = siteContent['main-content']['vision-content'];
 
 const middleImg = document.querySelector('#middle-img');
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
