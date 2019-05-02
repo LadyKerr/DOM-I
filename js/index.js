@@ -42,13 +42,33 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //Nav Items
-const nav = document.querySelectorAll('a');
-nav[0].textContent = siteContent['nav']['nav-item-1'];
-nav[1].textContent = siteContent['nav']['nav-item-2'];
-nav[2].textContent = siteContent['nav']['nav-item-3'];
-nav[3].textContent = siteContent['nav']['nav-item-4'];
-nav[4].textContent = siteContent['nav']['nav-item-5'];
-nav[5].textContent = siteContent['nav']['nav-item-6'];
+const navItem = document.querySelectorAll('a');
+console.log(navItem);
+navItem[0].textContent = siteContent['nav']['nav-item-1'];
+navItem[1].textContent = siteContent['nav']['nav-item-2'];
+navItem[2].textContent = siteContent['nav']['nav-item-3'];
+navItem[3].textContent = siteContent['nav']['nav-item-4'];
+navItem[4].textContent = siteContent['nav']['nav-item-5'];
+navItem[5].textContent = siteContent['nav']['nav-item-6'];
+
+navItem.forEach(nav => {
+nav.style.color = 'green';
+});
+
+const navShop = document.createElement('a');
+navShop.textContent = 'Shop';
+navShop.style.color = 'green';
+
+const navLogin = document.createElement('a');
+navLogin.textContent = 'Login';
+navLogin.style.color = 'green';
+
+const nav = document.querySelector('nav');
+console.log(nav);
+nav.appendChild(navShop);
+nav.prepend(navLogin);
+console.log(navShop);
+console.log(navLogin);
 
 
 //Top Area Text & Image
