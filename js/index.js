@@ -51,10 +51,12 @@ navItem[3].textContent = siteContent['nav']['nav-item-4'];
 navItem[4].textContent = siteContent['nav']['nav-item-5'];
 navItem[5].textContent = siteContent['nav']['nav-item-6'];
 
+//update nav item colors
 navItem.forEach(nav => {
 nav.style.color = 'green';
 });
 
+//Add new Nav Items
 const navShop = document.createElement('a');
 navShop.textContent = 'Shop';
 navShop.style.color = 'green';
@@ -70,9 +72,9 @@ nav.prepend(navLogin);
 console.log(navShop);
 console.log(navLogin);
 
-
 //Top Area Text & Image
 const ctaText = document.querySelector('.cta-text h1');
+console.log(ctaText);
 ctaText.textContent = siteContent['cta']['h1'];
 
 const ctaButton = document.querySelector('.cta-text button');
@@ -90,6 +92,11 @@ textHeading[2].textContent = siteContent['main-content']['services-h4'];
 textHeading[3].textContent = siteContent['main-content']['product-h4'];
 textHeading[4].textContent = siteContent['main-content']['vision-h4'];
 
+//stretch attempt
+textHeading.forEach(heading => {
+  heading.style.color = 'blue';
+});
+
 const textP = document.querySelectorAll('.text-content p');
 console.log(textP);
 textP[0].textContent = siteContent['main-content']['features-content'];
@@ -97,6 +104,10 @@ textP[1].textContent = siteContent['main-content']['about-content'];
 textP[2].textContent = siteContent['main-content']['services-content'];
 textP[3].textContent = siteContent['main-content']['product-content'];
 textP[4].textContent = siteContent['main-content']['vision-content'];
+
+textP.forEach(text => {
+  text.style.color = 'brown';
+});
 
 const middleImg = document.querySelector('#middle-img');
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
