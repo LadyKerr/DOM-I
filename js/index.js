@@ -44,12 +44,10 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 //Nav Items
 const navItem = document.querySelectorAll('a');
 console.log(navItem);
-navItem[0].textContent = siteContent['nav']['nav-item-1'];
-navItem[1].textContent = siteContent['nav']['nav-item-2'];
-navItem[2].textContent = siteContent['nav']['nav-item-3'];
-navItem[3].textContent = siteContent['nav']['nav-item-4'];
-navItem[4].textContent = siteContent['nav']['nav-item-5'];
-navItem[5].textContent = siteContent['nav']['nav-item-6'];
+for (let i=0; i < navItem.length; i++);
+navItem.forEach((item,i) => {
+  item.textContent = siteContent['nav'][`nav-item-${i+1}`];
+});
 
 //update nav item colors
 navItem.forEach(nav => {
@@ -84,13 +82,13 @@ const ctaImg = document.querySelector('#cta-img');
 ctaImg.setAttribute('src', siteContent['cta']['img-src'])
 
 //Middle Area Texts & Image
-const textHeading = document.querySelectorAll('.text-content h4');
+const textHeading = document.querySelectorAll('h4');
 console.log(textHeading);
-textHeading[0].textContent = siteContent['main-content']['features-h4'];
-textHeading[1].textContent = siteContent['main-content']['about-h4'];
-textHeading[2].textContent = siteContent['main-content']['services-h4'];
-textHeading[3].textContent = siteContent['main-content']['product-h4'];
-textHeading[4].textContent = siteContent['main-content']['vision-h4'];
+const titles = Object.values(siteContent.nav); 
+for(let i=0; i < textHeading.length; i++);
+  textHeading.forEach((text, i) => {
+  text.textContent = titles[i];
+});
 
 //stretch attempt
 textHeading.forEach(heading => {
